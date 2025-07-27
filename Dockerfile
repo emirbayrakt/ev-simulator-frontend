@@ -4,6 +4,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+
+# Make sure the env is injected at build time
+ARG VITE_GRAPHQL_API_URL
+ENV VITE_GRAPHQL_API_URL=$VITE_GRAPHQL_API_URL
+
 # Adjust to your actual build command and output folder (dist or build)
 RUN npm run build
 
