@@ -94,20 +94,14 @@ export default function SimulationsPage() {
             New Simulation
           </Link>
         </section>
-        <p className="text-gray-600 ">
-          Run a one-off simulation using seed and chargepoint inputs. Results
-          are shown below the form. This does not save a simulation to the
-          system.
-        </p>
-        {loading && <Loading />}
-        {error && <FullPageError message={error.message} />}
-
         <div>
           <p className="text-gray-600 mb-6">
             Simulations are used to model EV charging scenarios. You can create
             new simulations, edit existing ones, and run them to see results.
           </p>
         </div>
+        {loading && <Loading />}
+        {error && <FullPageError message={error.message} />}
 
         {!loading && simulations.length === 0 ? (
           <div className="rounded-lg border-dashed border-2 border-gray-200 bg-white p-10 flex flex-col items-center justify-center text-center text-gray-600">
