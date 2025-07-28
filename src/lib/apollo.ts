@@ -18,4 +18,5 @@ export const apolloClient = new ApolloClient({
       },
     },
   }),
+  connectToDevTools: false,
 });

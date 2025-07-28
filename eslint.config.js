@@ -5,8 +5,6 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
-// I'm having some esl int version compatibility issues, to not waste time on it, I am downgrading the version to a version I used in my prev project
-
 export default [
   { ignores: ['dist'] },
 
@@ -48,7 +46,7 @@ export default [
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        project: './tsconfig.app.json',
+        project: './tsconfig.node.json',
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
