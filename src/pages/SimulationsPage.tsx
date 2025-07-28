@@ -95,9 +95,13 @@ export default function SimulationsPage() {
           </Link>
         </section>
         <div>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600">
             Simulations are used to model EV charging scenarios. You can create
             new simulations, edit existing ones, and run them to see results.
+          </p>
+          <p className="text-gray-600 mb-6">
+            Use simulations to compare strategies, optimize infrastructure, and
+            gain insight before real-world deployment.
           </p>
         </div>
         {loading && <Loading />}
